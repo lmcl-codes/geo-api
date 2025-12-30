@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 const authRoutes = require("./routes/auth");
-app.use("/api", authRoutes);
+app.use(authRoutes);
 
 app.get("/", (req, res) => {
   res.send("API is running");
